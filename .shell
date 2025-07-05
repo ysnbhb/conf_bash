@@ -1,0 +1,18 @@
+push_git() {
+    if [ -z "$1" ]; then
+        echo "❌ Error: Commit message required."
+    else
+        git add . && git commit -m "$1" && git push
+    fi
+}
+
+tree_clean() {
+    find . -type d \( -name node_modules -o -name dist -o -name build -o -name .git -o -name .next -o -name .cache -o -name coverage -o -name .vscode -o -name .idea -o -name venv -o -name .venv -o -name __pycache__ \) -prune -o -not -path '*/\.*' -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+}
+
+alias push=push_git
+alias tree=tree_clean
+alias gg="go run ."
+alias run="cargo run"
+alias creat="cargo new"
+
