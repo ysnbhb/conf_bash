@@ -40,6 +40,7 @@ setup_extension() {
     code --install-extension PKief.material-icon-theme >/dev/null 2>&1 &
     code --install-extension Cardinal90.multi-cursor-case-preserve >/dev/null 2>&1 &
     code --install-extension Oracle.oracle-java >/dev/null 2>&1 &
+    code --install-extension WallabyJs.console-ninja >/dev/null 2>&1 &
 }
 
 open_app() {
