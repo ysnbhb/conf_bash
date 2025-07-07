@@ -50,6 +50,7 @@ open_app() {
     xdg-open "https://chatgpt.com/" >/dev/null 2>&1 &
     xdg-open "https://learn.zone01oujda.ma/intra/oujda" >/dev/null 2>&1 &
     xdg-open "https://web.telegram.org/k/" >/dev/null 2>&1 &
+    xdg-open "https://chess.com/" >/dev/null 2>&1 &
 }
 
 # Run the functions
