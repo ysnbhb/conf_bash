@@ -15,4 +15,10 @@ alias tree=tree_clean
 alias gg="go run ."
 alias run="cargo run"
 alias creat="cargo new"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gs="git status"
+
+
 
