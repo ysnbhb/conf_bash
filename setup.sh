@@ -55,13 +55,17 @@ open_app() {
 
 # Run the functions
 
+cp .shell "$HOME/"
 # Add source line to ~/.bashrc only if not already present
 if ! grep -qxF "source \$HOME/.shell" "$HOME/.bashrc"; then
     echo "source \$HOME/.shell" >>"$HOME/.bashrc"
 fi
 
+if ! grep -qxF "source \$HOME/.shell" "$HOME/.zshrc"; then
+    echo "source \$HOME/.shell" >>"$HOME/.zshrc"
+fi
+
 # Copy the .shell file to home directory
-cp .shell "$HOME/"
 
 setting
 setup_extension
