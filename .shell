@@ -10,6 +10,10 @@ tree_clean() {
     find . -type d \( -name node_modules -o -name dist -o -name build -o -name .git -o -name .next -o -name .cache -o -name coverage -o -name .vscode -o -name .idea -o -name venv -o -name .venv -o -name __pycache__ \) -prune -o -not -path '*/\.*' -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 }
 
+java_dir() {
+    mkdir $1 && cd $1 && touch $1.java 
+}
+
 alias push=push_git
 alias tree=tree_clean
 alias gg="go run ."
@@ -19,6 +23,7 @@ alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
 alias gs="git status"
+alias jv=java_dir
 
 
 
