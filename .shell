@@ -14,6 +14,21 @@ java_dir() {
     mkdir $1 && cd $1 && touch $1.java 
 }
 
+set_docker() {
+    wget https://get.docker.com/rootless -O docker.sh
+    chmod +x docker.sh
+    ./docker.sh
+    rm docker.sh
+}
+
+fix_docker() {
+    export PATH="$HOME/bin:$PATH" 
+    $HOME/bin/dockerd-rootless.sh > /tmp/dockerd.log 2>&1 &
+    export DOCKER_HOST="unix:///run/user/$(id -u)/docker.sock"
+}
+
+
+
 alias push=push_git
 alias tree=tree_clean
 alias gg="go run ."
@@ -24,6 +39,8 @@ alias gc="git commit"
 alias gp="git push"
 alias gs="git status"
 alias jv=java_dir
+alias fd=fix_docker
+alias sd=set_docker
 
 
 
