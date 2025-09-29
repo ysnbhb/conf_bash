@@ -1,7 +1,7 @@
 #!/bin/bash
 setting() {
     # Download wallpaper as webp
-    wget -q https://4kwallpapers.com/images/walls/thumbs_2t/12111.png -O "$HOME/Pictures/wallpaper.webp"
+    wget -q https://cdn.discordapp.com/attachments/1388532534454780038/1422239830078918778/1759158751267.jpg?ex=68dbf38f&is=68daa20f&hm=60526c7c9ff281e399d3ab8c560ff20e9fb04218066239d52d29dec75eba7a67 -O "$HOME/Pictures/wallpaper.webp"
 
     # Convert webp to jpg for better GNOME compatibility
     convert "$HOME/Pictures/wallpaper.webp" "$HOME/Pictures/wallpaper.jpg"
